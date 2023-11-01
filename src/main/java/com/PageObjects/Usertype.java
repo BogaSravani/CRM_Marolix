@@ -61,7 +61,7 @@ public class Usertype  extends Testbase{
     	typecode.clear();
     	typecode.sendKeys(props.getProperty("Changedcode"));
     	js.executeScript("arguments[0].click()",save);
-    	 search.clear();
+        search.clear();
     	search.sendKeys(props.getProperty("Changedcode")); 
     }
     public void verification()

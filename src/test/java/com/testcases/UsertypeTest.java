@@ -45,8 +45,7 @@ public class UsertypeTest extends Testbase{
 			lf.Dologin();
 			h.users();
 			u.editUser();
-			u.verification();
-			
+			u.verification();	
 		}
 		
 }
