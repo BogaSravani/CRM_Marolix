@@ -31,7 +31,7 @@ public class LoginTest extends Testbase {
 
 	@Test
 
-	public void Verifylogin() {
+	public void Verifylogin() throws Throwable {
 
 		lf.Dologin();
 
@@ -41,7 +41,7 @@ public class LoginTest extends Testbase {
 
 	}
 	@Test(dataProvider="getdata",dataProviderClass=LoginTest.class)
-	 public void VerfiyInvalidData(String Username,String Password)
+	 public void VerfiyInvalidData(String Username,String Password) throws Throwable
 	 {
 		 lf.DoLoginWithExcel(Username,Password);
 		 String url = driver.getCurrentUrl();
@@ -50,7 +50,7 @@ public class LoginTest extends Testbase {
 	@DataProvider 
 	public  Object[][] getdata() throws IOException
 	{
-		return Utils.getdatafromexcel(sheet);
+		return Utils.readDataFromExcel(sheet);
 	}
 
 	@AfterMethod

@@ -8,7 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
 public class Testbase {
 
@@ -39,19 +41,20 @@ public class Testbase {
 		if (browsername.equalsIgnoreCase("chrome")) {
 
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\Admin\\Desktop\\selenium\\chromedriver-win64\\chromedriver.exe");
-
-			driver = new ChromeDriver();
+					"C:\\Users\\pc\\Desktop\\selenium\\chromedriver-win64\\chromedriver.exe");
+           
+            
+            driver = new ChromeDriver();
 
 		}
 
 		else if (browsername.equalsIgnoreCase("Edge")) {
 
-			System.setProperty("Webdriver.edge.driver",
-					"C:\\Users\\Admin\\Desktop\\selenium\\chromedriver-win64\\chromedriver.exe");
+			System.setProperty("webdriver.edge.driver",
+					"C:\\Users\\pc\\Desktop\\selenium\\edgedriver_win64\\msedgedriver.exe");
 
-			driver = new EdgeDriver();
-
+			 
+	            driver = new EdgeDriver();
 		}
 
 		driver.manage().window().maximize();

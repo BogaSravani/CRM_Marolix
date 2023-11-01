@@ -1,7 +1,12 @@
-browser=chrome
+browser=Edge
 
 url=http://empirehome.myprojectsonline.co.in/
 
 
 username=sureshbabuemp@gmail.com
 password=ZPMHQHIA
+
+//users
+Typename=product lead
+Typecode=234
+Changedcode=200
