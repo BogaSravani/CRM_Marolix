@@ -30,20 +30,20 @@ public class MovestockTest extends Testbase {
 			  
 	 }
 	 @Test(priority=1)
-	 public void wareHouseToshowRoom() throws Throwable
+	 public void warehouseToshowroom() throws Throwable
 	 {
 		 
 		 h.movestock();
-		 m.wareHousetoshowRoom();
+		 m.warehousetoshowroom();
 		 sm.verifyWHtoSR();
 		 
 	 }
 	 @Test(priority=2)
-	 public void showRoomtowareHouse() throws Throwable
+	 public void showroomtowarehouse() throws Throwable
 	 {
 		  
 		 h.movestock();
-		 m.showRoomtowareHouse();
+		 m.showroomtowarehouse();
 		 sm.verifySRtoWH();
 	 }
 }

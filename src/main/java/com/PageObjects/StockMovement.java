@@ -41,9 +41,9 @@ public void verifyWHtoSR()
 public void verifySRtoWH()
 {
 	search.sendKeys(props.getProperty("Notes"));
-	for(WebElement rows:table)
+	for(WebElement row:table)
 	{
-		String notes=rows.getText();
+		String notes=row.getText();
 		if(notes.equals(props.getProperty("Notes")))
 		{
 			Assert.assertEquals(notes,props.getProperty("Notes"));
