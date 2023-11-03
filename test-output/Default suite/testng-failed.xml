@@ -4,6 +4,14 @@
   <test thread-count="5" name="Default test(failed)">
     <classes>
  
+      <class name="com.testcases.CustomerTest">
+        <methods>
+          <include name="deletecustomer"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testcases.CustomerTest -->
+ 
+ 
       <class name="com.testcases.MovestockTest">
  
       <class name="com.testcases.UserTypeTest">

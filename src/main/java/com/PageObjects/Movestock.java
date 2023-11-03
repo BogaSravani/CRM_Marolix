@@ -38,7 +38,7 @@ public class Movestock extends Testbase{
 	}
 
 
-	public StockMovement wareHousetoshowRoom() throws Throwable {
+	public StockMovement warehousetoshowroom() throws Throwable {
 		Utils.dropdownBy(props.getProperty("Movefrom"),MoveFrom);
 		Utils.dropdownBy(props.getProperty("Moveto"),MoveTo);
 		Utils.dropdownBy(props.getProperty("Modelno"),modelNo);
@@ -50,7 +50,7 @@ public class Movestock extends Testbase{
 		return  new StockMovement();
 		
 	}
-	public StockMovement showRoomtowareHouse() throws Throwable
+	public StockMovement showroomtowarehouse() throws Throwable
 	{
 		Utils.dropdownBy(props.getProperty("Moveto"),MoveFrom);
 		Utils.dropdownBy(props.getProperty("Movefrom"),MoveTo);

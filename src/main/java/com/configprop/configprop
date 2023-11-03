@@ -6,6 +6,7 @@ url=http://empirehome.myprojectsonline.co.in/
 username=sureshbabuemp@gmail.com
 password=ZPMHQHIA
 
+
 Typename=team lead
 Typecode=102
 Changedcode=115
@@ -16,3 +17,18 @@ Modelno=MS-01
 Quantity=01
 Note=Dressingtable
 Notes=Dtable
+
+date=12112023
+name=diwali
+desc=sunday
+
+name=sravani
+mobile=1234567890
+email=sravanib.marolix@gmail.com
+wtsappno=1234567890
+orgname=skr
+orgadd=banglore
+orgno=1234567890
+orgemail=skr@gmail.com
+gstno=1AGST2345
+changedname=sravani Boga
