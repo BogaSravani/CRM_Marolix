@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+ 
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
   <suite started-at="2023-11-03T14:26:22 IST" name="Default suite" finished-at="2023-11-03T14:27:10 IST" duration-ms="48690">
+ 
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+ 
+  <suite started-at="2023-11-02T11:49:48 IST" name="Default suite" finished-at="2023-11-02T11:50:06 IST" duration-ms="17823">
+ 
     <groups>
     </groups>
     <test started-at="2023-11-03T14:26:22 IST" name="Default test" finished-at="2023-11-03T14:27:10 IST" duration-ms="48690">
@@ -22,6 +30,7 @@
         <test-method signature="editcustomer()[pri:2, instance:com.testcases.CustomerTest@429bffaa]" started-at="2023-11-03T14:26:43 IST" name="editcustomer" finished-at="2023-11-03T14:26:49 IST" duration-ms="6354" status="PASS">
           <reporter-output>
           </reporter-output>
+ 
         </test-method> <!-- editcustomer -->
         <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.CustomerTest@429bffaa]" started-at="2023-11-03T14:26:49 IST" name="setup" finished-at="2023-11-03T14:26:56 IST" duration-ms="7113" status="PASS">
           <reporter-output>
@@ -40,6 +49,25 @@
           </reporter-output>
         </test-method> <!-- verify -->
       </class> <!-- com.testcases.CustomerTest -->
+ 
+        </test-method> <!-- warehouseToshowroom -->
+      </class> <!-- com.testcases.MovestockTest -->
+ 
+  <suite started-at="2023-11-02T09:29:27 IST" name="Default suite" finished-at="2023-11-02T09:29:40 IST" duration-ms="13776">
+    <groups>
+    </groups>
+    <test started-at="2023-11-02T09:29:27 IST" name="Default test" finished-at="2023-11-02T09:29:40 IST" duration-ms="13776">
+      <class name="com.testcases.UserTypeTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.UserTypeTest@28f3b248]" started-at="2023-11-02T09:29:27 IST" name="setup" finished-at="2023-11-02T09:29:31 IST" duration-ms="3957" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="edituser()[pri:0, instance:com.testcases.UserTypeTest@28f3b248]" started-at="2023-11-02T09:29:31 IST" name="edituser" finished-at="2023-11-02T09:29:40 IST" duration-ms="9785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- edituser -->
+      </class> <!-- com.testcases.UserTypeTest -->
+ 
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
