@@ -12,6 +12,9 @@ import org.testng.Assert;
 import com.base.Testbase;
 
 public class UserType extends Testbase {
+	public UserType()throws Throwable {
+		super();
+	}
 	JavascriptExecutor js;
 	@FindBy(xpath="//a[@href='/Master/UserTypeData']")
 	WebElement addnew;
@@ -31,7 +34,8 @@ public class UserType extends Testbase {
 {
 	PageFactory.initElements(driver,this);
 }
-  public void adduser()
+   
+public void adduser()
   {
  
 	  js = (JavascriptExecutor) driver; 

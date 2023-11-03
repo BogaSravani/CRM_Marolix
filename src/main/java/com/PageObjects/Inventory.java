@@ -103,7 +103,7 @@ public class Inventory extends Testbase {
 public void AddProduct(String Category,String ModelNumber,String Title,String ItemDescription,String Brand,String Height,String Width,String Breadth,String Color,String InventoryStatus,String InventoryCondition,String InventoryLocation,String RDate,String ActPrice,String Mrp,String HSNcode,String RName,String PODetails,String InvoiceNo,String quantity) throws AWTException, InterruptedException {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	Utils.waitForElement(Addnew);
-	Addnew.click();
+	 js.executeScript("arguments[0].click()",Addnew);
 	Utils.dropdownBy(Category,category);
 	//Utils.dropdown(sub_category,"178");
 	ModelNo.sendKeys(ModelNumber); 
@@ -115,7 +115,8 @@ public void AddProduct(String Category,String ModelNumber,String Title,String It
 	breadth.sendKeys(Breadth);
 	color.sendKeys(Color);
 	js.executeScript("arguments[0].click()",colorI);
-	Utils.fileupload("C:\\Users\\Admin\\Desktop\\Automation Images\\color.png");
+ 
+	Utils.fileupload("C:\\Users\\pc\\Desktop\\Automation Images\\color.png");
 	Utils.dropdownBy(InventoryStatus,Inventory_Status);
 	Utils.dropdownBy(InventoryCondition,Inventory_Condition);
 	Utils.dropdownBy(InventoryLocation,Inventory_Location);
@@ -129,9 +130,11 @@ public void AddProduct(String Category,String ModelNumber,String Title,String It
 	Quantity.clear();
 	Quantity.sendKeys(quantity);
 	js.executeScript("arguments[0].click()",PMImage);
-	Utils.fileupload("C:\\Users\\Admin\\Desktop\\Automation Images\\DT-01.jpg");
+ 
+	Utils.fileupload("C:\\Users\\pc\\Desktop\\Automation Images\\DT-01.jpg");
+	 
 	js.executeScript("arguments[0].click()",POImage);
-	Utils.fileupload("C:\\Users\\Admin\\Desktop\\Automation Images\\DT-03.jpg");
+	Utils.fileupload("C:\\Users\\pc\\Desktop\\Automation Images\\DT-03.jpg");
 	savebtn.click();
 	}
 }
