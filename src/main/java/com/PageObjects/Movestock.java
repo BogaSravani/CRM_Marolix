@@ -38,6 +38,11 @@ public class Movestock extends Testbase{
 	}
 
 
+	public Movestock() throws Throwable {
+		 super();
+	}
+
+
 	public StockMovement warehousetoshowroom() throws Throwable {
 		Utils.dropdownBy(props.getProperty("Movefrom"),MoveFrom);
 		Utils.dropdownBy(props.getProperty("Moveto"),MoveTo);

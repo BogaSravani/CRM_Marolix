@@ -19,8 +19,11 @@ Note=Dressingtable
 Notes=Dtable
 
 date=12112023
-name=diwali
+hname=diwali
 desc=sunday
+cname=childrensday
+cdate=14112023
+cdesc=tuesday
 
 name=sravani
 mobile=1234567890
