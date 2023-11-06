@@ -9,14 +9,18 @@ import com.PageObjects.Login_functionality;
 import com.PageObjects.UserType;
 import com.base.Testbase;
 
-public class UserTypeTest extends Testbase{
+ 
+public class UserTypeTest extends Testbase {
+ 
 	public UserTypeTest() throws Throwable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	 Login_functionality lf;
 	 Homepage h;
-	  UserType u;
+ 
+	 UserType u;
+ 
 	 @BeforeMethod
 	 public void setup() throws Throwable {
 
