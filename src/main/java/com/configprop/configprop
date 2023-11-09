@@ -1,4 +1,4 @@
-browser=edge
+browser=chrome
 
 url=http://empirehome.myprojectsonline.co.in/
 
@@ -35,3 +35,6 @@ orgno=1234567890
 orgemail=skr@gmail.com
 gstno=1AGST2345
 changedname=sravani Boga
+
+location=Banglore
+clocation=kadapa
