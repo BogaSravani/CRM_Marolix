@@ -41,7 +41,9 @@ public class Homepage extends Testbase{
 	//holiday
 		@FindBy(linkText="Holidays")
 		WebElement holidays;
-		
+	//location
+		@FindBy(xpath="//a[text()='Location ']")
+		WebElement location;
     public Homepage(WebDriver driver)throws Throwable
     {
     	PageFactory.initElements(driver,this);
@@ -80,6 +82,12 @@ public class Homepage extends Testbase{
 	{
 		Utils.moveToElement(customer);
 		allcustomer.click();
+	}
+	public  Location location() throws Throwable
+	{
+		Utils.moveToElement(master);
+		location.click();
+		return  new Location();
 	}
 	
 }
