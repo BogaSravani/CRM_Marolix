@@ -100,7 +100,7 @@ public class Inventory extends Testbase {
 	{
 		PageFactory.initElements(driver,this);
 	}
-public void AddProduct(String Category,String ModelNumber,String Title,String ItemDescription,String Brand,String Height,String Width,String Breadth,String Color,String InventoryStatus,String InventoryCondition,String InventoryLocation,String RDate,String ActPrice,String Mrp,String HSNcode,String RName,String PODetails,String InvoiceNo,String quantity) throws AWTException, InterruptedException {
+public void AddProduct(String Category,String ModelNumber,String Title,String ItemDescription,String Brand,String Height,String Width,String Breadth,String Color,String InventoryCondition,String InventoryLocation,String RDate,String ActPrice,String Mrp,String HSNcode,String RName,String PODetails,String InvoiceNo,String quantity) throws AWTException, InterruptedException {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	Utils.waitForElement(Addnew);
 	 js.executeScript("arguments[0].click()",Addnew);
@@ -116,8 +116,8 @@ public void AddProduct(String Category,String ModelNumber,String Title,String It
 	color.sendKeys(Color);
 	js.executeScript("arguments[0].click()",colorI);
  
-	Utils.fileupload("C:\\Users\\pc\\Desktop\\Automation Images\\color.png");
-	Utils.dropdownBy(InventoryStatus,Inventory_Status);
+	Utils.fileupload(props.getProperty("path"));
+	//Utils.dropdownBy(InventoryStatus,Inventory_Status);
 	Utils.dropdownBy(InventoryCondition,Inventory_Condition);
 	Utils.dropdownBy(InventoryLocation,Inventory_Location);
 	date.sendKeys(RDate);
@@ -131,10 +131,10 @@ public void AddProduct(String Category,String ModelNumber,String Title,String It
 	Quantity.sendKeys(quantity);
 	js.executeScript("arguments[0].click()",PMImage);
  
-	Utils.fileupload("C:\\Users\\pc\\Desktop\\Automation Images\\DT-01.jpg");
+	Utils.fileupload(props.getProperty("path2"));
 	 
 	js.executeScript("arguments[0].click()",POImage);
-	Utils.fileupload("C:\\Users\\pc\\Desktop\\Automation Images\\DT-03.jpg");
+	Utils.fileupload(props.getProperty("path3"));
 	savebtn.click();
 	}
 }
