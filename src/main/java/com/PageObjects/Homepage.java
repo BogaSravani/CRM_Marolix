@@ -44,6 +44,9 @@ public class Homepage extends Testbase{
 	//location
 		@FindBy(xpath="//a[text()='Location ']")
 		WebElement location;
+	//condition
+		@FindBy(xpath="//a[text()='Condition']")
+		WebElement condition;
     public Homepage(WebDriver driver)throws Throwable
     {
     	PageFactory.initElements(driver,this);
@@ -89,5 +92,10 @@ public class Homepage extends Testbase{
 		location.click();
 		return  new Location();
 	}
-	
+	public Condition Condition()throws Throwable
+	{
+		Utils.moveToElement(master);
+		condition.click();
+		return new Condition();
+	}
 }
