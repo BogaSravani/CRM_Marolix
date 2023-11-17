@@ -1,5 +1,6 @@
 package com.testcases;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -51,4 +52,9 @@ public class HolidaysTest extends Testbase {
 		 h.holidays();
 		 hd.verify();
 	 }
+	 @AfterMethod
+	    public void teardown()
+	    {
+	    	driver.quit();
+	    }
 }

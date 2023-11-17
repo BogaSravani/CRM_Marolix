@@ -1,5 +1,6 @@
 package com.testcases;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -46,4 +47,9 @@ public class MovestockTest extends Testbase {
 		 m.showroomtowarehouse();
 		 sm.verifySRtoWH();
 	 }
+	 @AfterMethod
+	    public void teardown()
+	    {
+	    	driver.quit();
+	    }
 }
