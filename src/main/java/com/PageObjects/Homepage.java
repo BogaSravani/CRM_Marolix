@@ -50,6 +50,9 @@ public class Homepage extends Testbase{
 	//shifts
 		@FindBy(linkText="Shifts")
 		WebElement shifts;
+   //company
+		@FindBy(linkText="Company")
+		WebElement company;
     public Homepage(WebDriver driver)throws Throwable
     {
     	PageFactory.initElements(driver,this);
@@ -106,5 +109,11 @@ public class Homepage extends Testbase{
 		Utils.moveToElement(master);
 		shifts.click();
 		return new Shifts();
+	}
+	public Company company() throws Throwable
+	{
+		Utils.moveToElement(master);
+		company.click();
+		return new Company();
 	}
 }
