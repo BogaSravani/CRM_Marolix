@@ -70,11 +70,16 @@ public class Homepage extends Testbase{
 		return new Movestock();
 		 
     }
+ 
 	public  UserType usertype() throws Throwable {
+ 
+ 
+  
     	Utils.moveToElement(master);
     	usertype.click();
 		return new UserType();
 	}
+ 
 	public Holidays holidays() throws Throwable
 	{
 		Utils.moveToElement(master);
@@ -98,6 +103,7 @@ public class Homepage extends Testbase{
 		location.click();
 		return  new Location();
 	}
+ 
 	public Condition Condition()throws Throwable
 	{
 		Utils.moveToElement(master);
@@ -115,5 +121,7 @@ public class Homepage extends Testbase{
 		Utils.moveToElement(master);
 		company.click();
 		return new Company();
-	}
+  }
+  }
+  }
 }
