@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.Utils.Utils;
 import com.base.Testbase;
 
 public class ConditionTypeData extends Testbase{
@@ -24,19 +25,17 @@ public class ConditionTypeData extends Testbase{
     {
     	PageFactory.initElements(driver,this);
     }
-    JavascriptExecutor jse=(JavascriptExecutor)driver;
-	 
     public Condition addCondition(String conditionname) throws Throwable
     {
     	Conditionname.sendKeys(conditionname);
-    	jse.executeScript("arguments[0].click()",save);
+    	Utils.javaScriptClick(save);
 		return new Condition();  	
     }
     public Condition editcondition(String Editedname) throws Throwable
     {
     	Conditionname.clear();
     	Conditionname.sendKeys(Editedname);
-    	 jse.executeScript("arguments[0].click()",save);
+    	Utils.javaScriptClick(save);
 		return new Condition();
     }
     

@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import com.Utils.Utils;
 import com.base.Testbase;
 
 public class Condition extends Testbase{
@@ -39,24 +40,23 @@ public class Condition extends Testbase{
 	{
 		PageFactory.initElements(driver,this);
 	}
-	 JavascriptExecutor jse=(JavascriptExecutor)driver;
+ 
 	public  ConditionTypeData addCondition() throws Throwable {
-		 
-		 jse.executeScript("arguments[0].click()",addnew);
+		 Utils.javaScriptClick(addnew);	 
 		return new ConditionTypeData();
 		 
 	}
 	public ConditionTypeData editCondition(String Conditionname) throws Throwable
 	{
 		search.sendKeys(Conditionname);
-		 jse.executeScript("arguments[0].click()",edit);
+		Utils.javaScriptClick(edit);
 		return new ConditionTypeData();	
 	}
 	public Condition deleteCondition(String changedcname) throws Throwable
 	{
 		search.sendKeys(changedcname);
-		jse.executeScript("arguments[0].click()",delete);
-		jse.executeScript("arguments[0].click()",yes);
+		Utils.javaScriptClick(delete);
+		Utils.javaScriptClick(yes);
 		return new Condition();	
 	}
 	public Condition verify(String changedcname) throws Throwable
