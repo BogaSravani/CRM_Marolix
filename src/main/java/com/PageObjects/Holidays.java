@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import com.Utils.Utils;
 import com.base.Testbase;
 
 public class Holidays extends Testbase
@@ -54,18 +55,16 @@ PageFactory.initElements(driver,this);
 }
 public  void addholiday()
 {
-	JavascriptExecutor js = (JavascriptExecutor) driver;
-js.executeScript("arguments[0].click()",addnew);
+Utils.javaScriptClick(addnew);
 	date.sendKeys(props.getProperty("date"));
 	name.sendKeys(props.getProperty("hname"));
 	desc.sendKeys(props.getProperty("desc"));
- 	js.executeScript("arguments[0].click()",savebtn);
+	Utils.javaScriptClick(savebtn);
  size= rows.size();
 System.out.println(size);
 }
 public void editholiday()
 {
-	JavascriptExecutor js = (JavascriptExecutor) driver;
 	for(WebElement r:rows)
 	{
 		String rowtext=r.getText();
@@ -74,7 +73,7 @@ public void editholiday()
 		 String dtxt=d.getText();
 		if(rowtext.contains(props.getProperty("desc"))&&dtxt.equals(props.getProperty("desc")))		
 		{			 
-			js.executeScript("arguments[0].click()",edit);
+			Utils.javaScriptClick(edit);
 			break;
 		}
 	}
@@ -84,20 +83,18 @@ public void editholiday()
 	 name.sendKeys(props.getProperty("cname"));
 	 desc.clear();
 	 desc.sendKeys(props.getProperty("cdesc"));
-	js.executeScript("arguments[0].click()",savebtn);
+	 Utils.javaScriptClick(savebtn);
 	 
 }
 public void deleteholiday()
 {
-
-	JavascriptExecutor js = (JavascriptExecutor) driver;
 	for(WebElement r:rows)
 	{
 		String rowtext=r.getText();
 		 
 		if(rowtext.contains(props.getProperty("cdesc")))
-		{		 
-			js.executeScript("arguments[0].click()",delete);
+		{	
+			Utils.javaScriptClick(delete);
 			break;
 		}
 	}
