@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import com.Utils.Utils;
 import com.base.Testbase;
 
 public class Location extends Testbase
@@ -36,28 +37,26 @@ public class Location extends Testbase
     //table
     @FindBy(xpath="//table[@id=\"mydatatable\"]/tbody/tr/td")
     List<WebElement> table;
-    JavascriptExecutor jse=(JavascriptExecutor)driver;
     public Location(WebDriver driver)throws Throwable
     {
     	PageFactory.initElements(driver,this);
     }
     public LocationTypeData addlocation() throws Throwable
     {
-    	 
-    	 jse.executeScript("arguments[0].click()",addnew);
+    	 Utils.javaScriptClick(addnew);
 		return new LocationTypeData();
     	
     }
     public LocationTypeData editlocation() throws Throwable
     {
     	search.sendKeys(props.getProperty("location"));
-    	 jse.executeScript("arguments[0].click()",edit);
+    	Utils.javaScriptClick(edit);
 		return new LocationTypeData();	
     }
     public Location  deletecustomer()throws Throwable
     {
     	search.sendKeys(props.getProperty("clocation"));
-    	 jse.executeScript("arguments[0].click()",delete);
+    	Utils.javaScriptClick(delete);
     	 yes.click();
 		return new Location(); 	
     }
