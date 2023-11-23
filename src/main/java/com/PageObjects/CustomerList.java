@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import com.Utils.Utils;
 import com.base.Testbase;
 
 public class CustomerList extends Testbase{
@@ -53,15 +54,12 @@ public class CustomerList extends Testbase{
 	    		String nametxt=row.getText();
 	    		if(nametxt.equals(props.getProperty("name")))
 	    		{
-	    			JavascriptExecutor js = (JavascriptExecutor) driver;
-	    		js.executeScript("arguments[0].click()",edit);
-	    		 
+	    			Utils.javaScriptClick(edit);
 	    		}
 	    	}
 			name.clear();
 			name.sendKeys(props.getProperty("changedname"));
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click()",save);
+			Utils.javaScriptClick(save);
 			return new CustomerList();
 	    }
 	    public  CustomerList deletecustomer() throws Throwable
@@ -72,8 +70,7 @@ public class CustomerList extends Testbase{
 	    		String txt=row.getText();
 	     if(txt.equals(props.getProperty("changedname")))
 	     {
-	    	JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click()",delete);
+			Utils.javaScriptClick(delete);
 		   yes.click();
 	    	
 	    }
