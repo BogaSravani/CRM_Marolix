@@ -101,9 +101,9 @@ public class Inventory extends Testbase {
 		PageFactory.initElements(driver,this);
 	}
 public void AddProduct(String Category,String ModelNumber,String Title,String ItemDescription,String Brand,String Height,String Width,String Breadth,String Color,String InventoryCondition,String InventoryLocation,String RDate,String ActPrice,String Mrp,String HSNcode,String RName,String PODetails,String InvoiceNo,String quantity) throws AWTException, InterruptedException {
-	JavascriptExecutor js = (JavascriptExecutor) driver;
-	Utils.waitForElement(Addnew);
-	 js.executeScript("arguments[0].click()",Addnew);
+ 
+	Utils.waitForElement(Addnew);	  
+	 Utils.javaScriptClick(Addnew);
 	Utils.dropdownBy(Category,category);
 	//Utils.dropdown(sub_category,"178");
 	ModelNo.sendKeys(ModelNumber); 
@@ -114,8 +114,7 @@ public void AddProduct(String Category,String ModelNumber,String Title,String It
 	width.sendKeys(Width);
 	breadth.sendKeys(Breadth);
 	color.sendKeys(Color);
-	js.executeScript("arguments[0].click()",colorI);
- 
+	Utils.javaScriptClick(colorI);
 	Utils.fileupload(props.getProperty("path"));
 	//Utils.dropdownBy(InventoryStatus,Inventory_Status);
 	Utils.dropdownBy(InventoryCondition,Inventory_Condition);
@@ -129,11 +128,9 @@ public void AddProduct(String Category,String ModelNumber,String Title,String It
 	INo.sendKeys(InvoiceNo);
 	Quantity.clear();
 	Quantity.sendKeys(quantity);
-	js.executeScript("arguments[0].click()",PMImage);
- 
+	Utils.javaScriptClick(PMImage);
 	Utils.fileupload(props.getProperty("path2"));
-	 
-	js.executeScript("arguments[0].click()",POImage);
+	Utils.javaScriptClick(POImage); 
 	Utils.fileupload(props.getProperty("path3"));
 	savebtn.click();
 	}
