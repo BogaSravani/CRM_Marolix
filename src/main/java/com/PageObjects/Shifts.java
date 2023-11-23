@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import com.Utils.Utils;
 import com.base.Testbase;
 
 public class Shifts extends Testbase {
@@ -36,8 +37,7 @@ public Shifts(WebDriver driver) throws Throwable{
 }
 public  Shifts addShift() throws Throwable
 {
-	JavascriptExecutor jse=(JavascriptExecutor)driver;
-	jse.executeScript("arguments[0].click()",addnew);
+	 Utils.javaScriptClick(addnew);
 	return new Shifts();
 }
 public Shifts deleteShift() throws Throwable

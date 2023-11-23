@@ -30,20 +30,20 @@ public void setup() throws Throwable
 	 s=new Shifts(driver);
 	 lf.Dologin();
 }
-@Test
+@Test(priority=1)
 public void addShift() throws Throwable
 {
 	h.Shifts();
 	s.addShift();
 	std.addShift();
 }
-@Test
+@Test(priority=2)
 public void deleteShift() throws Throwable
 {
 	h.Shifts();
 	s.deleteShift();	
 }
-@Test
+@Test(priority=3)
 public void verify() throws Throwable
 
 {
