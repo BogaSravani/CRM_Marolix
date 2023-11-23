@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
+import com.Utils.Utils;
  
 import com.base.Testbase;
 
@@ -16,7 +16,6 @@ public class UserType extends Testbase {
 	public UserType()throws Throwable {
 		super();
 	}
-	JavascriptExecutor js;
 	@FindBy(xpath="//a[@href='/Master/UserTypeData']")
 	WebElement addnew;
 	@FindBy(id="TypeName")
@@ -38,23 +37,19 @@ public class UserType extends Testbase {
    
 public void adduser()
   {
- 
-	  js = (JavascriptExecutor) driver; 
-	  js.executeScript("arguments[0].click()",addnew);
+	  Utils.javaScriptClick(addnew);
 	  typename.sendKeys(props.getProperty("Typename"));
 	  typecode.sendKeys(props.getProperty("Typecode"));
-	  js.executeScript("arguments[0].click()",save);
-	  
+	  Utils.javaScriptClick(save);  
   }
   public void edituser() throws InterruptedException
   {
-	  js = (JavascriptExecutor) driver; 
 	  search.sendKeys(props.getProperty("Typename"));
-	  js.executeScript("arguments[0].click()",edit);
+	  Utils.javaScriptClick(edit);
 	  typecode.clear();  
 	  typecode.sendKeys(props.getProperty("Changedcode"));
 	  Thread.sleep(2000);
-	  js.executeScript("arguments[0].click()",save);
+	  Utils.javaScriptClick(save);
 	  search.sendKeys(props.getProperty("Changedcode"));
   }
   public void verification()
