@@ -1,8 +1,7 @@
 package com.reports;
 
- 
-
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -24,7 +23,11 @@ public class ExtentReporterNG implements IReporter {
 	private ExtentReports extent;
 
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
-		extent = new ExtentReports(outputDirectory + File.separator + "Extent.html", true);
+		  String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+	        String reportFileName = "ExtentReport_" + timeStamp + ".html";
+
+		extent = new ExtentReports(outputDirectory + File.separator +reportFileName, true);
+
 		for (ISuite suite : suites) {
 			Map<String, ISuiteResult> result = suite.getResults();
 
@@ -45,11 +48,11 @@ public class ExtentReporterNG implements IReporter {
 	private void buildTestNodes(IResultMap tests, LogStatus status) {
 		
 		ExtentTest test;
-        
+
 		if (tests.size() > 0) {
 			for (ITestResult result : tests.getAllResults()) {
 				test = extent.startTest(result.getMethod().getMethodName());
-   
+
 				test.setStartedTime(getTime(result.getStartMillis()));
 				test.setEndedTime(getTime(result.getEndMillis()));
 
@@ -73,6 +76,3 @@ public class ExtentReporterNG implements IReporter {
 		return calendar.getTime();
 	}
 }
-
-
-

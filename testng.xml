@@ -8,10 +8,12 @@
     <classes>
       <class name="com.testcases.LoginTest"/>
       <class name="com.testcases.InventoryTest"/>
+      <class name="com.testcases.ShiftTest"/>
+      <class name="com.testcases.CompanyTest"/>
       <class name="com.testcases.HolidaysTest"/>
       <class name="com.testcases.MovestockTest"/>
-      <class name="com.testcases.ConditionTest"/>
       <class name="com.testcases.CustomerTest"/>
+      <class name="com.testcases.ConditionTest"/>
       <class name="com.testcases.LocationTest"/>
       <class name="com.testcases.UserTypeTest"/>
     </classes>
