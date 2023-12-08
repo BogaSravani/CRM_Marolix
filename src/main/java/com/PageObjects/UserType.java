@@ -57,11 +57,7 @@ public void adduser()
 	  for(WebElement row:table)
 	  {
 		  String text=row.getText();
-		  if(text.equals(props.getProperty("Changedcode")))
-		  {
 			  Assert.assertEquals(props.getProperty("Changedcode"),text);
-			  break;
-		  }
 	  }
   }
 }

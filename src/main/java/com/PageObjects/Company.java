@@ -44,11 +44,7 @@ public class Company extends Testbase
 	{
 		search.sendKeys(props.getProperty("warehousenum"));	
 		String text=table.getText();
-		if(text.equalsIgnoreCase(text))
-		{
 			Assert.assertEquals(text,props.getProperty("warehousenum"));
-		}
-		
 		return new Company();
 	}
 }

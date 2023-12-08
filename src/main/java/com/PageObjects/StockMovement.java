@@ -31,11 +31,8 @@ public void verifyWHtoSR()
 	for(WebElement row:table)
 	{
 		String note=row.getText();
-		if(note.equals(props.getProperty("Note")))
-		{
-			Assert.assertEquals(note,props.getProperty("Note"));
-			break;
-		}
+		Assert.assertEquals(note,props.getProperty("Note"));
+		 
 	}
 }
 public void verifySRtoWH()
@@ -44,11 +41,7 @@ public void verifySRtoWH()
 	for(WebElement row:table)
 	{
 		String notes=row.getText();
-		if(notes.equals(props.getProperty("Notes")))
-		{
 			Assert.assertEquals(notes,props.getProperty("Notes"));
-			break;
-		}
 	}
 }
 }
